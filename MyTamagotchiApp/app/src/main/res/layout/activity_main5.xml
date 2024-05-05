@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1BEE7"
+    tools:context=".MainActivity5">
+
+    <Button
+        android:id="@+id/btnBackToMainAct2"
+        android:layout_width="209dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="96dp"
+        android:backgroundTint="#5E35B1"
+        android:text="@string/back"
+        android:textColor="#F3E5F5"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageDisplay5"
+        android:layout_width="363dp"
+        android:layout_height="407dp"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="39dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toTopOf="@+id/btnBackToMainAct2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/cat_playing"
+        tools:ignore="HardcodedText,ImageContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FootballDatabaseApp</string>
+    <string name="top_south_african_teams">Top South African Teams</string>
+    <string name="https_footballdatabase_com_ranking_south_africa_1">https://footballdatabase.com/ranking/south-africa/1</string>
+</resources>

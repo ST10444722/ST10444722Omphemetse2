@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1BEE7"
+    tools:context=".MainActivity2">
+
+    <ImageView
+        android:id="@+id/imageDisplay2"
+        android:layout_width="371dp"
+        android:layout_height="326dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="42dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toTopOf="@+id/btnMainActivity3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/cat_welcome"
+        tools:ignore="HardcodedText,ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/btnMainActivity3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="34dp"
+        android:backgroundTint="#673AB7"
+        android:text="@string/feed"
+        android:textColor="#EDE7F6"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtDisplay"
+        app:layout_constraintEnd_toStartOf="@+id/btnMainActivity4" />
+
+    <Button
+        android:id="@+id/btnMainActivity4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="42dp"
+        android:backgroundTint="#673AB7"
+        android:text="@string/clean"
+        android:textColor="#EDE7F6"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintStart_toEndOf="@+id/btnMainActivity3" />
+
+    <Button
+        android:id="@+id/btnMainActivity5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginBottom="42dp"
+        android:backgroundTint="#673AB7"
+        android:text="@string/play"
+        android:textColor="#F3E5F5"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintStart_toEndOf="@+id/btnMainActivity4" />
+
+    <TextView
+        android:id="@+id/txtDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/hunger"
+        android:textColor="#9C27B0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtDisplay2"
+        app:layout_constraintEnd_toStartOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/txtDisplay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="43dp"
+        android:text="@string/cleanliness"
+        android:textColor="#9C27B0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtDisplay3"
+        app:layout_constraintEnd_toStartOf="@+id/progressBar2" />
+
+    <TextView
+        android:id="@+id/txtDisplay3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="63dp"
+        android:text="@string/health"
+        android:textColor="#9C27B0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/progressBar4" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginBottom="57dp"
+        android:scaleY="4"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+        app:layout_constraintStart_toEndOf="@+id/txtDisplay" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="60dp"
+        android:scaleY="4"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar4"
+        app:layout_constraintStart_toEndOf="@+id/txtDisplay2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginBottom="76dp"
+        android:scaleY="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtDisplay3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>MainActivity.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #0033b3;}
+.s1 { color: #080808;}
+.s2 { color: #8c8c8c; font-style: italic;}
+.s3 { color: #1750eb;}
+.s4 { color: #067d17;}
+.s5 { color: #0037a6;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">za.ac.iie.myarray02app</span>
+
+<span class="s1">import androidx.appcompat.app.AppCompatActivity</span>
+<span class="s1">import android.os.Bundle</span>
+<span class="s1">import android.widget.Button</span>
+<span class="s1">import android.widget.EditText</span>
+<span class="s1">import android.widget.TextView</span>
+
+<span class="s0">class </span><span class="s1">MainActivity : AppCompatActivity() {</span>
+
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">txtResults: TextView</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">edtNum: EditText</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">btnPopulate: Button</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">btnDisplay: Button</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">btnSumEven: Button</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">btnAvg: Button</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">btnMult5: Button</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">btnOdd: Button</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">txtSum: TextView</span>
+
+    <span class="s1">private </span><span class="s0">var </span><span class="s1">arrNum = arrayOf&lt;Int&gt;()</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate(savedInstanceState: Bundle?) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span>
+        <span class="s1">setContentView(R.layout.activity_main)</span>
+
+        <span class="s1">txtResults = findViewById&lt;TextView&gt;(R.id.txtResults)</span>
+        <span class="s1">edtNum = findViewById&lt;EditText&gt;(R.id.edtNum)</span>
+        <span class="s1">btnPopulate = findViewById&lt;Button&gt;(R.id.btnPopulate)</span>
+        <span class="s1">btnSumEven = findViewById&lt;Button&gt;(R.id.btnSumEven)</span>
+        <span class="s1">btnAvg = findViewById&lt;Button&gt;(R.id.btnAvg)</span>
+        <span class="s1">btnMult5 = findViewById&lt;Button&gt;(R.id.btnMult5)</span>
+        <span class="s1">btnOdd = findViewById&lt;Button&gt;(R.id.btnOdd)</span>
+        <span class="s1">txtSum = findViewById&lt;TextView&gt;(R.id.txtSum)</span>
+        <span class="s1">btnDisplay = findViewById&lt;Button&gt;(R.id.btnDisplay)</span>
+
+        <span class="s1">btnPopulate.setOnClickListener {                   </span><span class="s2">//generates numbers</span>
+            <span class="s1">getNum()</span>
+        <span class="s1">}</span>
+        <span class="s1">btnDisplay.setOnClickListener {                   </span><span class="s2">//displaying numbers</span>
+            <span class="s1">dispNum()</span>
+        <span class="s1">}</span>
+        <span class="s1">btnSumEven.setOnClickListener {                  </span><span class="s2">//displays sum of all even numbers in array</span>
+            <span class="s0">var </span><span class="s1">sumEven = </span><span class="s3">0</span>
+            <span class="s0">for </span><span class="s1">(num </span><span class="s0">in </span><span class="s1">arrNum) {</span>
+                <span class="s0">if </span><span class="s1">(num % </span><span class="s3">2 </span><span class="s1">== </span><span class="s3">0</span><span class="s1">) {                     </span><span class="s2">//Check if number is even</span>
+                    <span class="s1">sumEven += num</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+            <span class="s1">txtSum.text = </span><span class="s4">&quot;Sum: </span><span class="s5">$</span><span class="s1">sumEven</span><span class="s4">&quot;</span>
+        <span class="s1">}</span>
+        <span class="s1">btnAvg.setOnClickListener {                    </span><span class="s2">//average of all numbers</span>
+            <span class="s0">var </span><span class="s1">totalSum = </span><span class="s3">0</span>
+            <span class="s0">for </span><span class="s1">(num </span><span class="s0">in </span><span class="s1">arrNum) {</span>
+                <span class="s1">totalSum += num</span>
+            <span class="s1">}</span>
+            <span class="s0">val </span><span class="s1">average = </span><span class="s0">if </span><span class="s1">(arrNum.isNotEmpty()) totalSum.toDouble() / arrNum.size </span><span class="s0">else </span><span class="s3">0.0</span>
+            <span class="s1">txtSum.text = </span><span class="s4">&quot;Average: </span><span class="s5">$</span><span class="s1">average</span><span class="s4">&quot;</span>
+        <span class="s1">}</span>
+        <span class="s1">btnMult5.setOnClickListener {                 </span><span class="s2">//sum of numbers in array that are multiple of 5</span>
+            <span class="s0">var </span><span class="s1">sumMult5 = </span><span class="s3">0</span>
+            <span class="s0">for </span><span class="s1">(num </span><span class="s0">in </span><span class="s1">arrNum) {</span>
+                <span class="s0">if </span><span class="s1">(num % </span><span class="s3">5 </span><span class="s1">== </span><span class="s3">0</span><span class="s1">) {</span>
+                    <span class="s1">sumMult5 += num</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+            <span class="s1">txtSum.text = </span><span class="s4">&quot;Sum: </span><span class="s5">$</span><span class="s1">sumMult5</span><span class="s4">&quot;</span>
+        <span class="s1">}</span>
+        <span class="s1">btnOdd.setOnClickListener {                </span><span class="s2">//average of all odd numbers in array</span>
+            <span class="s0">var </span><span class="s1">sumOdd = </span><span class="s3">0</span>
+            <span class="s0">var </span><span class="s1">countOdd = </span><span class="s3">0</span>
+            <span class="s0">for </span><span class="s1">(num </span><span class="s0">in </span><span class="s1">arrNum) {</span>
+                <span class="s0">if </span><span class="s1">(num % </span><span class="s3">2 </span><span class="s1">!= </span><span class="s3">0</span><span class="s1">) {              </span><span class="s2">//Check if number is odd</span>
+                    <span class="s1">sumOdd += num</span>
+                    <span class="s1">countOdd++</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+            <span class="s0">val </span><span class="s1">averageOdd = </span><span class="s0">if </span><span class="s1">(countOdd != </span><span class="s3">0</span><span class="s1">) sumOdd.toDouble() / countOdd </span><span class="s0">else </span><span class="s3">0.0</span>
+            <span class="s1">txtSum.text = </span><span class="s4">&quot;Average: </span><span class="s5">$</span><span class="s1">averageOdd</span><span class="s4">&quot;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+        <span class="s1">private </span><span class="s0">fun </span><span class="s1">getNum() {</span>
+            <span class="s1">arrNum = Array(</span><span class="s3">10</span><span class="s1">) { (</span><span class="s3">1</span><span class="s1">..</span><span class="s3">10</span><span class="s1">).random() }     </span><span class="s2">//Correct range from 1 to 10</span>
+
+        <span class="s1">}</span>
+
+        <span class="s1">private </span><span class="s0">fun </span><span class="s1">dispNum() {</span>
+            <span class="s1">txtResults.text = arrNum.joinToString(</span><span class="s4">&quot;</span><span class="s5">\n</span><span class="s4">&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

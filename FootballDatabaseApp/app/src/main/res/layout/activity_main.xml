@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pexels_aphiwat_chuangchoem_364308"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/headingTextView"
+        android:layout_width="387dp"
+        android:layout_height="140dp"
+        android:fontFamily="@font/anton"
+        android:text="@string/top_south_african_teams"
+        android:textColor="#050505"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/sourceTextView"
+        android:layout_width="382dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/https_footballdatabase_com_ranking_south_africa_1"
+        android:textColor="#020202"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/teamsTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/teamsTextView"
+        android:layout_width="358dp"
+        android:layout_height="457dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="38dp"
+        android:lineSpacingExtra="24sp"
+        android:textColor="#090909"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

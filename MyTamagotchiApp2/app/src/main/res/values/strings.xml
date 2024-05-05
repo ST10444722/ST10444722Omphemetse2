@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyTamagotchiApp2</string>
+    <string name="get_started">Get Started</string>
+    <string name="welcome_to_your_tamagotchi_app_my_name_is_darla">Welcome to your Tamagotchi App. My Name is Darla</string>
+    <string name="todo">TODO</string>
+    <string name="feed">Feed</string>
+    <string name="clean">Clean</string>
+    <string name="play">Play</string>
+    <string name="health">Health</string>
+    <string name="cleanliness">Cleanliness</string>
+    <string name="hunger">Hunger</string>
+    <string name="back">Back</string>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyArray02App</string>
+    <string name="compute_avg">Compute Avg</string>
+    <string name="display">Display</string>
+    <string name="sum_of_multiple">Sum of Multiple</string>
+    <string name="avg_odd">Avg Odd</string>
+    <string name="populate">Populate</string>
+    <string name="compute_sum_even">Compute Sum Even</string>
+    <string name="sum">Sum:</string>
+</resources>
